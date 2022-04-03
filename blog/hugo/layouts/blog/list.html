@@ -1,0 +1,37 @@
+{{ define "main" }}
+    <header>
+        <h1 class="border-bottom">Read the Latest Blog Post</h1>
+    </header>
+{{ end }}
+
+{{ define "feed" }}
+
+{{ $paginator := .Paginate (where .Pages "Type" "blog") 24 }}
+
+
+    <div class="row-max-3">
+      {{ range $paginator.Pages  }}
+
+                <div class="card card-lesson">
+                        {{ partial "lesson-image.html" . }}
+                <div class="card-content">
+
+                    <a href="{{ .RelPermalink }}">
+                        <h3>{{ .Title }}</h3>
+                    </a>
+                    
+                    <p>{{ .Params.description }}</p>
+                
+                    {{ partial "tags.html" .  }}
+                
+                </div>
+            </div>
+
+      {{ end }}
+    </div>
+
+{{ template "_internal/pagination.html" . }}
+
+
+
+{{ end }}
