@@ -1,7 +1,7 @@
 {
-  "name": "fireship",
+  "name": "exploit-me",
   "version": "0.0.1",
-  "description": "Awesome content for developers",
+  "description": "Awesome content for pentesters",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/fireship-io/fireship.io"
@@ -22,23 +22,27 @@
     "reset": "rm -rf ./node_modules ./package-lock.json && npm install && npm run dev"
   },
   "keywords": [],
-  "author": "",
+  "author": "khanisgr8",
   "license": "ISC",
   "dependencies": {
+    "ajv": "^8.11.0",
     "hotroute": "0.0.7"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^13.3.1",
+    "@angular/core": "^13.3.1",
     "assets-webpack-plugin": "^7.1.1",
     "atomic-algolia": "^0.3.17",
     "clean-webpack-plugin": "^4.0.0",
-    "concurrently": "^7.1.0",
+    "concurrently": "^4.1.0",
     "css-loader": "^6.7.1",
     "cypress": "^9.5.2",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "firebase-admin": "^10.0.2",
-    "firebase-tools": "^10.5.0",
+    "document-register-element": "^1.14.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "firebase-admin": "^6.1.0",
+    "firebase-tools": "^7.14.0",
     "fs-extra": "^7.0.0",
-    "http-server": "^14.1.0",
+    "http-server": "^0.11.1",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
