@@ -1,7 +1,7 @@
 <nav class="topnav">
 
   <div class="topnav-logo">
-    <a href="/" class="item logo">
+    <a href="/" class="khan">
       {{ partial "svg/logo.svg" . }}
       <!-- <div class="version">v{{ .Site.Data.defaults.version }}</div> -->
     </a>
@@ -13,65 +13,33 @@
       Blog
     </a>
     
-    <a href="/cheatsheet" class="item item-text" aria-label="full courses">
+    <a href="/cheatsheet" class="item item-text" aria-label="CheatSheet">
       {{ partial "svg/backpack.svg" . }}
       cheat-sheet
     </a>
 
-    <a href="/tags" class="item item-text" aria-label="full courses">
+    <a href="/tags" class="item item-text" aria-label="Tags">
       {{ partial "svg/tags.svg" . }}
       Tags
     </a>
     
-    <a href="/about" class="item item-text" aria-label="full courses">
-      {{ partial "svg/tags.svg" . }}
-      About
-    </a>
+ 
   </div>
 
 
   <div class="topnav-icons flex-center">
 
     
-    <modal-button selector="algolia-search">
-      <span class="item">
-          {{ partial "svg/search.svg" . }}
-          <span class="item-label tag tag-blue tag-sm">Search</span>
-      </span>
-    </modal-button>
-    <allow-if level="pro">
-      <span slot="falsey">
-      <a href="/pro" class="pro-link" aria-label="fireship pro">
-          <div class="item">
-            {{ partial "svg/rocket.svg" . }}
-              <!-- <button class="btn btn-green" aria-label="fireship pro">PRO</button> -->
-              <span class="item-label tag tag-green tag-sm">Pro</span>
-          </div>
-      </a>
-      </span>
-    </allow-if>
+ 
 
-  <theme-btn>
+  <theme-btn >
       <span slot="dark" class="item">{{ partial "svg/sun.svg" }}</span>
       <span slot="light" class="item">{{ partial "svg/moon.svg" }}</span>
       <span class="item-label tag tag-pink tag-sm">Theme</span>
   </theme-btn>
     
     
-    <allow-if level="user">
-        <a class="item" href="/dashboard">
-            <span class="item-avatar"><user-data field="photo-url"></user-data></span>
-        </a>
     
-        <modal-button slot="falsey" selector="login-modal" >
-          <span class="item last">
-            {{ partial "svg/user-visor.svg" . }}
-            <span class="item-label tag tag-purple tag-sm">Login</span>
-          </span>
-                <!-- <img src="/img/google-login.svg" alt="google login" class="google-login-img"> -->
-                <!-- <button class="btn btn-blue" aria-label="fireship sign up">Sign In</button> -->
-        </modal-button>
-    </allow-if>
 
   </div>
 

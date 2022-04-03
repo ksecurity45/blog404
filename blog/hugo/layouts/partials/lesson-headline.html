@@ -80,16 +80,7 @@
         </div>
 
         <div class="post-detail">
-        <div class="post-buttons">
-            {{ with .Params.github }}
-                <a class="btn btn-contrast" href="{{ . }}">
-                    {{ partial "svg/code-merge.svg" }} Code
-                </a>
-            {{ end }}
-            <a class="btn btn-purple" href="{{ .Site.Data.links.slack }}">
-            {{ partial "svg/slack.svg" . }} Slack
-            </a>
-        </div>
+    
 
         <div class="post-tags">{{ partial "tags.html" . }}</div>
         </div>
